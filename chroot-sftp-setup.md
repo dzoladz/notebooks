@@ -1,7 +1,7 @@
 Setup Chroot SFTP (No SSH)
 ==========================
 
-Scenario: Callimachus works at Miskatonic University. Callimachus is working on a project that requires the placement of data files onto a remote server owned by Permissible Data Corp. (PDC). PDC will be processing the files with an automated script and returning them to Callimachus. 
+**Scenario**: Callimachus works at Miskatonic University. Callimachus is working on a project that requires the placement of data files onto a remote server owned by Permissible Data Corp. (PDC). PDC will be processing the files with an automated script and returning them to Callimachus. 
 
 You'll need some users that will only be able to perform chrooted SFTP. You'll probably want to place them into a group for simplfied administration. 
 
@@ -63,7 +63,7 @@ Pubkey Authentication yes
 RSAAuthentication yes
 ```
 
-### Create Supporting Directory Structrue
+### Create Supporting Directory Structure
 
 Create the substitute ```/home``` directory for your SFTP-only users.
 
