@@ -1,4 +1,5 @@
-#Setup Chroot SFTP (No SSH)
+Setup Chroot SFTP (No SSH)
+==========================
 
 Scenario: Callimachus works at Miskatonic University. Callimachus is working on a project that requires the placement of data files onto a remote server owned by Permissible Data Corp. (PDC). PDC will be processing the files with an automated script and returning them to Callimachus. 
 
