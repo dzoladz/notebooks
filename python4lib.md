@@ -43,3 +43,5 @@ Python
 - https://docs.python.org/3/library/shutil.html
 - Shell util
 
+# Fuzzy Wuzzy
+- https://github.com/seatgeek/fuzzywuzzy
