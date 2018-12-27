@@ -63,6 +63,9 @@ git reset file.txt
 # Remove file.txt from tracking
 git rm --cached file.txt
 
+# Undo act of commit
+git reset --soft HEAD^
+
 # Rename file.txt
 git mv file.txt newfile.txt
 
