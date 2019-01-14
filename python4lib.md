@@ -45,3 +45,6 @@ Python
 
 # Fuzzy Wuzzy
 - https://github.com/seatgeek/fuzzywuzzy
+
+# pikepff
+- https://github.com/pikepdf/pikepdf
