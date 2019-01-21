@@ -19,3 +19,6 @@ A small collection of open source applications, with a focus on common applicati
 * [Monit](https://mmonit.com/monit/)
 * [Cockpit](https://cockpit-project.org/)
 * [Glances](https://nicolargo.github.io/glances/)
+
+## Password Management
+* [Bitwarden](https://bitwarden.com/)
