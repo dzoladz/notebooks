@@ -25,3 +25,6 @@ A small collection of open source applications, with a focus on common applicati
 
 ## Office Productivity
 * [LibreOffice](https://www.libreoffice.org/)
+
+## File Sync and Share
+* [Nextcloud](https://nextcloud.com/)
