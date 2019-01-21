@@ -24,6 +24,10 @@ A small collection of open source applications, with a focus on common applicati
 ## Password Management
 * [Bitwarden](https://bitwarden.com/)
 
+## Website Frameworks and Publishing Platforms
+* [Hugo](https://gohugo.io/)
+* [ghost](https://ghost.org/)
+
 ## Office Productivity
 * [LibreOffice](https://www.libreoffice.org/)
 
