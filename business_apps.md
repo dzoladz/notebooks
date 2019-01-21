@@ -22,3 +22,6 @@ A small collection of open source applications, with a focus on common applicati
 
 ## Password Management
 * [Bitwarden](https://bitwarden.com/)
+
+## Office Productivity
+* [LibreOffice](https://www.libreoffice.org/)
