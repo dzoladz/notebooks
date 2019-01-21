@@ -13,3 +13,9 @@ A small collection of open source applications, with a focus on common applicati
 
 ## Security - Social Engineering
 * [Gophish](https://getgophish.com/)
+
+## Infrastructure and Application Monitoring
+* [Prometheus](https://prometheus.io/)
+* [Monit](https://mmonit.com/monit/)
+* [Cockpit](https://cockpit-project.org/)
+* [Glances](https://nicolargo.github.io/glances/)
