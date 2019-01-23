@@ -12,7 +12,7 @@ A small collection of open source applications, with a focus on common applicati
 * [Tuleap](https://www.tuleap.org)
 
 ## Security - Social Engineering
-* [Gophish](https://getgophish.com/)
+* [GoPhish](https://getgophish.com/)
 
 ## Infrastructure and Application Monitoring
 * [Prometheus](https://prometheus.io/)
@@ -20,6 +20,7 @@ A small collection of open source applications, with a focus on common applicati
 * [Cockpit](https://cockpit-project.org/)
 * [Glances](https://nicolargo.github.io/glances/)
 * [Grafana](https://grafana.com/)
+* [graylog](https://www.graylog.org/products/open-source)
 
 ## Password Management
 * [Bitwarden](https://bitwarden.com/)
