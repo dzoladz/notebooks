@@ -29,6 +29,10 @@ A small collection of open source applications, with a focus on common applicati
 * [Hugo](https://gohugo.io/)
 * [ghost](https://ghost.org/)
 
+## Identity Management & Directory Services
+* [Keycloak] (https://www.keycloak.org/)
+* [OpenLDAP] (https://www.openldap.org/)
+
 ## Office Productivity
 * [LibreOffice](https://www.libreoffice.org/)
 
