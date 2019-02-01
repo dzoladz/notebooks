@@ -1,5 +1,6 @@
 Tasks
 =====
+A collection commands for tasks that I've needed to perform multiple times.
 
 ## Delete Old Kernels, Classic Version
 
