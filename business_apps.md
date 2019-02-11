@@ -41,3 +41,6 @@ A small collection of open source applications, with a focus on common applicati
 * [Nextcloud](https://nextcloud.com/)
 * [Pydio](https://pydio.com/en)
 * [OwnCloud](https://owncloud.org/)
+
+## Messaging Platforms
+* [Mattermost](https://mattermost.com/)
