@@ -25,3 +25,37 @@ update-grub
 ```bash
 du -hs /path/to/directory
 ```
+
+## Tuning with Sysctl
+
+File Location on Ubuntu
+
+```bash
+nano -w /etc/sysctl.conf
+```
+
+Count instances of SYN received
+
+```bash
+netstat -ant|grep SYN_RECV|wc -l
+```
+
+Check States
+```bash
+netstat -nta | egrep "State|443"
+netstat -nta | egrep "State|80"
+```
+
+Check Current Value for Parameter
+
+```bash
+sysctl -n net.ipv4.tcp_syncookies
+sysctl -n net.ipv4.tcp_max_syn_backlog
+sysctl -n net.ipv4.tcp_synack_retries
+```
+
+Reload configuration
+
+```bash
+sysctl -p
+```
