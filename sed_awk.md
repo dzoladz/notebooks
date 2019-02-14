@@ -7,3 +7,9 @@ sed -i '/compress/a\    delaycompress' ezproxy_*
 ```
 
 ## awk
+
+Read through a directory of log files, find entries for a specific user, sort the results, print only the "interesting" data points
+
+```bash
+grep -rni "username" | sort | awk 'BEGIN {OFS="\t"}; {split($1,date,":"); print date[3], $2, $3, $4}'
+```
