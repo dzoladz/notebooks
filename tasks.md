@@ -26,6 +26,12 @@ update-grub
 du -hs /path/to/directory
 ```
 
+## Locate all files with a specific name in the entire directory and search through those files for a line of text using regex, sort
+
+```bash
+find . -iname config.txt -exec grep "^[A-Za-z ]*\.ohionet\.org" {} \; -print | grep Name | sort
+```
+
 ## Tuning with Sysctl
 
 File Location on Ubuntu
