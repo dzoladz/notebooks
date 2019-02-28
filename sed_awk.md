@@ -14,7 +14,7 @@ username:password \
 ::group=-Admin.StatusUpdate-Admin.Restart' {} \;| less
 ``` 
 
-## awk
+## awk (columnar data processor)
 
 Read through a directory of log files, find entries for a specific user, sort the results, print only the "interesting" data points
 
