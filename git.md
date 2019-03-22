@@ -7,6 +7,12 @@ Version control
 git config
 git config --global user.name "derekz"
 git config --global user.email derekz@derekzoladz.com
+
+# Remember my creds for 15 minutes
+git config credential.helper cache
+
+# Store my creds in a plain-text .git-credentials file
+git config --global credential.helper store
 ```
 
 # Clone
