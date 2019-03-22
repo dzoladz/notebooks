@@ -111,6 +111,9 @@ git push origin master # push to remote
 ```bash
 # Case-insensitive search for files containing `commit`
 git grep -i 'commit'
+
+# List files in repo using file globbing
+git ls-files *.py
 ```
 
 #### History
