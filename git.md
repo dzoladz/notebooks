@@ -34,6 +34,7 @@ mkdir repo_name
 cd repo_name
 git init
 ```
+
 #### Remotes
 ```bash
 # Add initial remote named 'origin'
@@ -113,4 +114,7 @@ git log
 
 # Show commit d2b557da6450c3dc77766b86d6d7b832af6d3d6a
 git show d2b557da6450c3dc77766b86d6d7b832af6d3d6a
+
+# Show commits by specific author
+git log --author=dzoladz
 ```
