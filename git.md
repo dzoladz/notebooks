@@ -127,3 +127,9 @@ git show d2b557da6450c3dc77766b86d6d7b832af6d3d6a
 # Show commits by specific author
 git log --author=dzoladz
 ```
+
+# Just for Fun
+```bash
+# Who has the most commits in this repo
+git shortlog -s -n
+```
