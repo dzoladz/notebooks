@@ -107,6 +107,12 @@ git merge bugfix # merge changes into master
 git push origin master # push to remote
 ```
 
+#### Search Repo
+```bash
+# Case-insensitive search for files containing `commit`
+git grep -i 'commit'
+```
+
 #### History
 ```bash
 # List commit history of current branch
