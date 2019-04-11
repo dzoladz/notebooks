@@ -14,6 +14,8 @@ username:password \
 ::group=-Admin.StatusUpdate-Admin.Restart' {} \;| less
 ``` 
 
+Or, when a vendor transitions to HTTPS and you need to update 60+ EZproxy stanzas to specifically allow a new protocol.
+
 ## awk (columnar data processor)
 
 Read through a directory of log files, find entries for a specific user, sort the results, print only the "interesting" data points
