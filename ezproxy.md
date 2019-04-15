@@ -14,3 +14,11 @@ If Region() eq "OH"; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 /Common
 ```
+
+Regex for use in the main authentication block. Deny all access, unless the location contains OH, IA, OR MI in the string.
+
+```bash
+Set access = "deny";
+If Region() =~ "/.*(OH|IA|MI).*/"; Set access = "allow"
+If access eq "deny"; Deny irefused.htm
+```
