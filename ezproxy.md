@@ -25,7 +25,7 @@ If access eq "deny"; Deny irefused.htm
 
 The above should be placed before any `IfRefused; Deny irefused.htm` or `IfExpired; Deny iexpired.htm` directives in the main authentication block.
 
-It's also possible to restrict authentication to US-based IPs, using the `IfCountry` function.
+It's also possible to restrict authentication to US-based IPs, using the `IfCountry` function. `IfCountry` used the two-letter [ISO 3166 Country Codes](https://dev.maxmind.com/geoip/legacy/codes/iso3166/).
 
 ```bash
 Set access = "deny";
