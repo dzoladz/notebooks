@@ -22,3 +22,5 @@ Set access = "deny";
 If Region() =~ "/.*(OH|IA|MI).*/"; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 ```
+
+The above should be placed before any `IfRefused; Deny irefused.htm` or `IfExpired; Deny iexpired.htm` directives in the main authentication block.
