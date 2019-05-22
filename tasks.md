@@ -20,6 +20,12 @@ apt remove --purge linux-image-3.1.0-131-generic
 update-grub
 ```
 
+## Convert .mov -> .mp4 With FFMPEG
+
+```bash
+ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
+```
+
 ## Find the Size of a Directory
 
 ```bash
