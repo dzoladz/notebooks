@@ -11,11 +11,11 @@ Homebrew - MacOS Package Manager
 
 #### Globals
 
-`brew update`	update packages
-`brew list --versions`	show installed packages
-`brew cask list --versions`	show installed casks
-`brew doctor` check system for potential problems
-`brew help` print help info
+- `brew update`	update packages
+- `brew list --versions`	show installed packages
+- `brew cask list --versions`	show installed casks
+- `brew doctor` check system for potential problems
+- `brew help` print help info
 
 #### Packages
 
