@@ -18,3 +18,20 @@ brew install libpq
 ```bash
 brew link --force libpq
 ```
+
+3. Start Postgres services
+
+```bash
+```
+
+4. Create a database, and...
+
+```bash
+createdb `first`
+```
+
+Fix role "postgres" does not exist error
+
+```bash
+createuser -s postgres
+```
