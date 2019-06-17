@@ -2,6 +2,8 @@ Postgres
 ============
 Installation on MacOS using Homebrew services
 
+## First Steps
+
 1. Install PostgreSQL, preferably a pinned version
 ```bash
 brew install postgresql@10
@@ -13,16 +15,18 @@ brew install postgresql@10
 brew install libpq
 ```
 
-`libpq` won't install itself in the `/usr/local/bin` directory like other Homebrew applications. To make that happen, you need to run:
+> `libpq` won't install itself in the `/usr/local/bin` directory like other Homebrew applications. To make that happen, you need to run:
 
 ```bash
 brew link --force libpq
 ```
 
 3. Start Postgres services
-
+brew services start postgresql
 ```bash
 ```
+
+> Check `brew info postgresql`
 
 4. Create a database, and...
 
@@ -30,7 +34,7 @@ brew link --force libpq
 createdb `first`
 ```
 
-Fix role "postgres" does not exist error
+> Fix role "postgres" does not exist error
 
 ```bash
 createuser -s postgres
