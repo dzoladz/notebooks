@@ -40,3 +40,10 @@ createdb `first`
 ```bash
 createuser -s postgres
 ```
+
+## COMMANDS
+
+- Create database `createdb <database_name>`
+- List databases `psql -U postgres -l`
+- Show tables in database `psql -U postgres -d <database_name>`
+- Drop database `dropdb <database_name>`
