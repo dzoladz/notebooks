@@ -22,8 +22,9 @@ brew link --force libpq
 ```
 
 3. Start Postgres services
-brew services start postgresql
+
 ```bash
+brew services start postgresql
 ```
 
 > Check `brew info postgresql`
