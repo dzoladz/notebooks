@@ -41,9 +41,26 @@ createdb `first`
 createuser -s postgres
 ```
 
+## PSQL
+- Run psql client as user postgres `psql -U postgres`
+
+#### Quick Start
+- `\q` - Quit/Exit
+- `\l` - List databases
+- `\c <database>` - Connect to a database
+- `\x` - Pretty-format query results
+
+
+#### Up and Running
+- `\d <table>` - Show table definition, including triggers
+- `\dy` - List events
+- `\df` - List functions
+- `\di` - List indexes
+- `\dn` - List schemas
+- `\dv` - List views
+- `\copy (SELECT * FROM __table_name__) TO 'file_path_and_name.csv' WITH CSV`: Export a table as CSV
+
 ## COMMANDS
 
 - Create database `createdb <database_name>`
-- List databases `psql -U postgres -l`
-- Show tables in database `psql -U postgres -d <database_name>`
 - Drop database `dropdb <database_name>`
