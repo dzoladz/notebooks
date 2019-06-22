@@ -44,7 +44,9 @@ createuser -s postgres
 ## PSQL
 - Run psql client as user postgres `psql -U postgres`
 
+
 #### Quick Start
+- `\?` - List all available commands
 - `\q` - Quit/Exit
 - `\l` - List databases
 - `\c <database>` - Connect to a database
