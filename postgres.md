@@ -40,17 +40,18 @@ createdb `first`
 ```bash
 createuser -s postgres
 ```
+## Initial Reading
+[PostgreSQL Guide](http://postgresguide.com/)
 
 ## PSQL
-- Run psql client as user postgres `psql -U postgres`
-
+- Run psql client as user postgres - `psql -U postgres`
+- Connect to local postgres database as a specific user - `psql -h localhost -U <postgres_user> <database>``
 
 #### Quick Start
 - `\?` - List all available commands
 - `\q` - Quit/Exit
 - `\l` - List databases
 - `\c <database>` - Connect to a database
-- `\x` - Pretty-format query results
 
 
 #### Up and Running
@@ -60,7 +61,12 @@ createuser -s postgres
 - `\di` - List indexes
 - `\dn` - List schemas
 - `\dv` - List views
-- `\copy (SELECT * FROM __table_name__) TO 'file_path_and_name.csv' WITH CSV`: Export a table as CSV
+- `\e` - Open default text editor in psql shell
+- `\copy (SELECT * FROM __table_name__) TO 'file_path_and_name.csv' WITH CSV` - Export a table as CSV
+
+#### Settings
+- `\timing` - Turn on query timing
+- `\x` - Pretty-format query results
 
 ## COMMANDS
 
