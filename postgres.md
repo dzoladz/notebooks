@@ -54,7 +54,7 @@ createuser -s postgres
 - `\c <database>` - Connect to a database
 
 
-#### Up and Running
+#### Up and Running, Informational
 - `\d <table>` - Show table definition, including triggers
 - `\dy` - List events
 - `\df` - List functions
@@ -68,7 +68,13 @@ createuser -s postgres
 - `\timing` - Turn on query timing
 - `\x` - Pretty-format query results
 
-## COMMANDS
+## Database Commands, outside of psql
 
 - Create database `createdb <database_name>`
 - Drop database `dropdb <database_name>`
+- Restore database `pg_restore --no-owner --dbname <database> <database.dump>`
+
+## Database Commands, inside of PSQL (DON'T FORGET `;`)
+
+- Create database `CREATE DATABASE <database>`
+- Remove database `DROP DATABASE <database>`
