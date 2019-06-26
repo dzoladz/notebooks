@@ -18,6 +18,14 @@ Remove BOM and write file back to disk:
 :set nobomb
 ```
 
+## Print the Number of Lines in a File
+
+Because I can never remember the command I need
+
+```bash
+wc -l <file>
+```
+
 ## Delete Old Kernels, Classic Version
 
 ```bash
