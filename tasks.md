@@ -6,7 +6,17 @@ A collection commands for tasks that I've needed to perform multiple times.
 
 When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character `ï»¿` that begins the `config.txt` file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.
 
+Using vim, does current file have a BOM?
 
+```bash
+:set bomb?
+```
+
+Remove BOM and write file back to disk:
+
+```bash
+:set nobomb
+```
 
 ## Delete Old Kernels, Classic Version
 
