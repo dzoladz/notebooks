@@ -55,7 +55,10 @@ createuser -s postgres
 
 
 #### Up and Running, Informational
+- `\d` - List tables
 - `\d <table>` - Show table definition, including triggers
+- `\d+ <table>` - Show additional info about a table
+
 - `\dy` - List events
 - `\df` - List functions
 - `\di` - List indexes
@@ -67,6 +70,30 @@ createuser -s postgres
 #### Settings
 - `\timing` - Turn on query timing
 - `\x` - Pretty-format query results
+
+## Backup and Restore
+
+#### Backup, plain text
+- `pg_dump <dbname> > db.sql` - plain text
+
+#### Backup, for persistence and storage
+- `pg_dump -Fc <dbname> > db.bak` - compressed binary format
+- `pg_dump -Ft <dbname> > db.tar` - tarball format
+
+#### Restore
+If the database already exists,
+- `pg_restore -Fc db.bak` - restore compressed binary format
+- `pg_restore -Ft db.tar` - restore tarball format
+
+If creating the database new from a dump, you'll need to add the `-C` flag.
+
+#### Import, as a new database
+Create the database
+- `createdb -T template0 <dbname>`
+
+Import database from dump
+- `pg_restore --clean --no-owner --verbose -d <dbname> db.bak` -
+
 
 ## Database Commands, outside of psql
 
