@@ -49,7 +49,7 @@ crontab /path/to/cronjobs.txt # Load cron jobs from file
 0 3 1-7 * *  if [ `date +\%a` = Tue ]; then /path/to/ami-genie.sh; fi
 ```
 
-#### At 11:30 on Sunday, download the EZproxy RejectIP Blacklist from GitHub and write the file to `/usr/local/ezmanage/includes/global_reject_ip.txt`. Send an email with the download details.
+##### At 11:30 on Sunday, download the EZproxy RejectIP Blacklist from GitHub and write the file to `/usr/local/ezmanage/includes/global_reject_ip.txt`. Send an email with the download details.
 ```bash
 30 11 * * 0 root /usr/bin/wget --output-document global_reject_ip.txt https://raw.githubusercontent.com/prbutler/EZProxy_IP_Blacklist/master/EZProxy_IP_Blacklist_RejectIP.txt -O /usr/local/ezmanage/includes/global_reject_ip.txt 2>&1 | mail -s "EZproxy: Refresh RejectIP File" -a "From: someuser \<someuser@epv1.example.org\>" anotheruser@example.org
 ```
