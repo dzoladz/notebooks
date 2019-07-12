@@ -73,4 +73,12 @@ find @attr 1=12 "b2769533"
 
 # Show the MARC
 s 1
+
+# Change the output format to OPAC for additional info
+format opac
+
+> Data holdings 0
+> localLocation: Stacks
+> callNumber: RA790 .M613 2018
+> publicNote: AVAILABLE
 ```
