@@ -57,3 +57,20 @@ close
 exit
 
 ```
+
+### Innovative Interfaces, Sierra
+The standard z39.50 port is *210*
+
+```bash
+# Yaz connection to State Library of Ohio z39.50
+yaz-client catalog.library.ohio.gov:210/innopac
+
+# Open connection for search
+open catalog.library.ohio.gov:210/innopac
+
+# Grab a specific bibliographic record
+find @attr 1=12 "b2769533"
+
+# Show the MARC
+s 1
+```
