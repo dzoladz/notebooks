@@ -62,6 +62,26 @@ du -hs /path/to/directory
 find . -iname config.txt -exec grep "^[A-Za-z ]*\.ohionet\.org" {} \; -print | grep Name | sort
 ```
 
+
+## Globbing
+
+```bash
+# Minutes flag
+-mmin +360
+
+# Days flag
+-mtime +7
+
+# Include only files with an extension of 'txt'
+find /sftp/plc/incoming/ -type f -name '*.txt' -print0
+
+# Exclude any directories with a name that start with 'pl'. Include only files older than 30 hours.
+find /sftp/[^pl]*/incoming/ -type f -mmin +1800  -print0
+
+# Include directories with a specific name. Remove all matching files that are older than 30 hours.
+find /sftp/[\(antioch\|findlay\|franciscan\|wilmington\)]*/incoming/ -type f -mmin +1800  -print0 | xargs -r0 rm --
+```
+
 ## Tuning with Sysctl
 
 File Location on Ubuntu
