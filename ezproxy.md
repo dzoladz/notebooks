@@ -32,3 +32,9 @@ Set access = "deny";
 IfCountry US; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 ```
+
+There are times when you might need to Find/Replace username and password values within an `<iframe>` element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.
+```bash
+Find </iframe>
+Replace </iframe><script>(function() { setTimeout(function() {window.frames[0].document.getElementById('username').value = "USERNAME";}, 1000); })();(function() { setTimeout(function() {window.frames[0].document.getElementById('password').value = "PASSWORD";}, 1000); })();</script>
+```
