@@ -2,7 +2,13 @@ Tasks
 =====
 A collection commands for tasks that I've needed to perform multiple times.
 
-## Byte order mark (BOM)
+## Convert PuTTY SSH2 Public Key to OpenSSH
+
+```bash
+ssh-keygen -if ssh2publickey.pub >> opensshpublickey.pub
+```
+
+## Byte Order Mark (BOM)
 
 When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character `ï»¿` that begins the `config.txt` file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.
 
