@@ -38,3 +38,9 @@ There are times when you might need to Find/Replace username and password values
 Find </iframe>
 Replace </iframe><script>(function() { setTimeout(function() {window.frames[0].document.getElementById('username').value = "USERNAME";}, 1000); })();(function() { setTimeout(function() {window.frames[0].document.getElementById('password').value = "PASSWORD";}, 1000); })();</script>
 ```
+
+SAML authorization check, within `shibuser.txt`, against the `userid` attribute released to EZproxy
+> Authorize `userid`, if it begins with  1, 3, or 5. Otherwise, record `userid` and deny with `itype.htm`
+```bash
+If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; Stop
+```
