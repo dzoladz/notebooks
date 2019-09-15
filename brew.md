@@ -39,3 +39,19 @@ Homebrew - MacOS Package Manager
 - `brew services restart postgresql` restart service
 - `brew services stop postgresql` stop service
 - `brew services list` list service statuses
+
+#### Hugo - Install Specific Version
+1. Review commit logs and identify the commit for the version of Hugo you want to install
+- https://github.com/Homebrew/homebrew-core/commits/master/Formula/hugo.rb
+
+2. Add the commit to the shell script below and execute.
+```bash
+#!/usr/local/bin/bash
+
+FORMULA=hugo
+COMMIT=############
+RAW_PATH=https://raw.githubusercontent.com/Homebrew/homebrew-core
+
+brew unlink ${FORMULA} && \
+brew install ${RAW_PATH}/${COMMIT}/Formula/${FORMULA}.rb
+```
