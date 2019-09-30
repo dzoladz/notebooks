@@ -48,3 +48,6 @@ Python
 
 # pikepff
 - https://github.com/pikepdf/pikepdf
+
+# csvkit
+- https://github.com/wireservice/csvkit
