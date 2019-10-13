@@ -91,21 +91,30 @@ git pull
 # List all branches in the local repository
 git branch
 
+# Show all local and remote branches
+git branch -a
+
 # Create a branch named 'bugfix'
 git branch bugfix
 
 # Switch to branch 'bugfix'
-git checkout bugfux
+git checkout bugfix
 
 # Delete branch 'bugfix'
 git branch -d bugfix
 
 # Merge bugfix into master
 git checkout master # local working master branch
-git pull origin master # incorportate remote updates
+git pull origin master # incorporate remote updates
 git merge bugfix # merge changes into master
 git push origin master # push to remote
 ```
+
+#### Clean up a dirty pull
+git stash
+git pull origin master
+git stash pop
+
 
 #### Search Repo
 ```bash
