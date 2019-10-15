@@ -82,3 +82,18 @@ format opac
 > callNumber: RA790 .M613 2018
 > publicNote: AVAILABLE
 ```
+
+### Evergreen ILS
+```bash
+# Yaz Connection
+yaz-client galion.cool-cat.org:210
+
+# Open Galion database
+open galion.cool-cat.org:210/galion
+
+# Find some cats
+find cats
+
+# Return cat at index 1
+show 1
+```
