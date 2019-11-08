@@ -11,9 +11,7 @@ Create a `reject.cidr` file in `/etc/postfix`. To it, add one or more problemati
 2001:db8::1		OK
 2001:db8::/32		REJECT
 ```
-__FROM THE DOCS__ - _Rule order matters! Place specific whitelist entries before general blacklist entries._
-
-<br>
+__FROM THE DOCS__ - _Rule order matters! Place specific whitelist entries before general blacklist entries._  
 
 #### 2. Hash the `reject.cidr` file - [Postfix Reference](http://www.postfix.org/postmap.1.html)
 
@@ -21,8 +19,7 @@ The `reject.cidr` file must be converted to a database that Postfix can read. Th
 
 ```bash
 postmap /etc/postfix/reject.cidr
-```
-<br>
+```  
 
 #### 3. Update `/etc/postfix/main.cf` - [Postfix Reference](http://www.postfix.org/access.5.html)
 
@@ -33,9 +30,7 @@ smtpd_recipient_restrictions =
    check_client_access cidr:/etc/postfix/reject.cidr
 ```
 
-__FROM THE DOCS__ - Placing a block list at the beginning of the `smtpd_recipient_restrictions` parameter ensures that the IP blocks are obeyed above all other processing, but just as importantly, prevents more-expensive operations, such as virus scanning and spam scoring, from running when the outcome is predetermined.
-
-<br>
+__FROM THE DOCS__ - Placing a block list at the beginning of the `smtpd_recipient_restrictions` parameter ensures that the IP blocks are obeyed above all other processing, but just as importantly, prevents more-expensive operations, such as virus scanning and spam scoring, from running when the outcome is predetermined.  
 
 #### 4. Reload the Postfix configuration
 
@@ -43,8 +38,7 @@ Execute the following command
 
 ```bash
 /etc/init.d/postfix reload
-```
-<br>
+```  
 
 #### 5. Check the Postfix log
 
@@ -52,12 +46,11 @@ Check `mail.log` to confirm that there weren’t any errors reading the new conf
 
 ```bash
 tail -n 20 /var/log/mail.log
-```
-<br>
+```  
 
 ## Taking it Further
 
 There are two parameters we can set in postfix, which acts differently.
 
-`check_client_access` : Block by client IP, client IP range or Hostname
-`check_sender_access` : Block by sender e-mail address (FROM field)
+- `check_client_access` : Block by client IP, client IP range or Hostname
+- `check_sender_access` : Block by sender e-mail address (FROM field)
