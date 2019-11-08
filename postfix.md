@@ -6,13 +6,14 @@ Blacklist & Whitelist with Postfix
 Create a `reject.cidr` file in `/etc/postfix`. To it, add one or more problematic IPs or ranges from your logwatch reports, mail logs, email headers, etc.:
 
 ```bash
-192.168.1.1			OK
+192.168.1.1		OK
 192.168.0.0/16		REJECT
-2001:db8::1			OK
+2001:db8::1		OK
 2001:db8::/32		REJECT
 ```
 __FROM THE DOCS__ - _Rule order matters! Place specific whitelist entries before general blacklist entries._
 
+<br>
 
 #### 2. Hash the `reject.cidr` file - [Postfix Reference](http://www.postfix.org/postmap.1.html)
 
@@ -21,6 +22,7 @@ The `reject.cidr` file must be converted to a database that Postfix can read. Th
 ```bash
 postmap /etc/postfix/reject.cidr
 ```
+<br>
 
 #### 3. Update `/etc/postfix/main.cf` - [Postfix Reference](http://www.postfix.org/access.5.html)
 
@@ -33,6 +35,8 @@ smtpd_recipient_restrictions =
 
 __FROM THE DOCS__ - Placing a block list at the beginning of the `smtpd_recipient_restrictions` parameter ensures that the IP blocks are obeyed above all other processing, but just as importantly, prevents more-expensive operations, such as virus scanning and spam scoring, from running when the outcome is predetermined.
 
+<br>
+
 #### 4. Reload the Postfix configuration
 
 Execute the following command
@@ -40,6 +44,7 @@ Execute the following command
 ```bash
 /etc/init.d/postfix reload
 ```
+<br>
 
 #### 5. Check the Postfix log
 
@@ -48,6 +53,7 @@ Check `mail.log` to confirm that there weren’t any errors reading the new conf
 ```bash
 tail -n 20 /var/log/mail.log
 ```
+<br>
 
 ## Taking it Further
 
