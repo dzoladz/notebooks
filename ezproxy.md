@@ -1,5 +1,6 @@
 EZproxy
 =======
+A snippet of fragments useful for administering EZproxy
 
 ## Reject connections that originate from IPs outside of Ohio region.
 
@@ -33,12 +34,14 @@ IfCountry US; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 ```
 
+## Supply Resource Credentials withn an iFrame
 There are times when you might need to Find/Replace username and password values within an `<iframe>` element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.
 ```bash
 Find </iframe>
 Replace </iframe><script>(function() { setTimeout(function() {window.frames[0].document.getElementById('username').value = "USERNAME";}, 1000); })();(function() { setTimeout(function() {window.frames[0].document.getElementById('password').value = "PASSWORD";}, 1000); })();</script>
 ```
 
+## Regex Validation of SAML Attributes in the Auth: Namespace
 SAML authorization check, within `shibuser.txt`, against the `userid` attribute released to EZproxy
 > Authorize `userid`, if it begins with  1, 3, or 5. Otherwise, record `userid` and deny with `itype.htm`
 ```bash
