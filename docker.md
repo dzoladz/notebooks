@@ -18,6 +18,7 @@ docker volume rm [my_volume]
 docker volume create [my_volume]
 docker volume ls
 docker volume inspect [my_volume]
+docker container ls -aq # list all containers
 ```
 
 #### Tags
@@ -53,19 +54,26 @@ docker ps -a # Running and Stopped Processes
 docker rmi centos:centos6
 ```
 
+docker image prune # remove all currently unused imaged
+docker image prune -a # clear everything
+
 #### Remove containers
 ```bash
 docker rm nginx:old
+docker system prune # remove all stopped containers, images, unused networks
 ```
 
-#### Remove all stopped containers, using bash command substitution
-docker rm `docker ps -a -q`
+#### Stop all containers. Remove all stopped containers, using bash command substitution
+docker container stop $(docker container ls -aq) # stop all containers
+docker container rm $(docker container ls -aq) # remove all stopped containers
+docker rmi -f $(docker images -aq)
+
 
 ## Docker Inspect
 
 #### get info about container
 ```bash
-docker inspect 
+docker inspect
 ```
 
 #### get ip address of container
@@ -73,7 +81,21 @@ docker inspect
 docker inspect nginx:latest | grep IPAddr
 ```
 
+
+
 ## Ports and Volumes
+
+#### volumes
+
+docker volume ls
+docker volume rm
+`docker volume prune`
+
+#### ports
+In docker-compose
+`expose` -> reveal ports to the docker environment
+`ports` -> expose ports to docker and to the host system (i.e. publish the ports)
+
 
 #### Bind ports
 ```bash
@@ -86,6 +108,9 @@ docker run -d -p 8080:80 --name=WebServer nginx:latest
 # docker run -d -p 8080:80 --name=webserver -v HOSTVOLPATH:CONTAINERVOLPATH nginx:latest
 docker run -d -p 8080:80 --name=webserver -v /home/user/www:/usr/share/nginx/html nginx:latest
 ```
+
+
+
 
 ## BUILDING, using a Dockerfile
 
@@ -108,10 +133,13 @@ docker build -t dzoladz/ubuntu .
 docker build -t keycloak-proxy .
 
 docker run -d -p 80:80 -p 443:443 --name=keycloak-proxy keycloak-proxy:latest
- 
+
 # Reload Nginx config in running container
 docker exec <container name> nginx -s reload
 ```
+
+
+
 
 ## Applications
 
@@ -125,3 +153,7 @@ docker run -d -p 3000:3000 --name metabase metabase/metabase
 ```bash
 docker run -d -p 8080:80 --name owncloud --mount source=/Users/Derek/docker/owncloud,target=/var/www/html owncloud:8.1
 ```
+
+## networks
+docker network ls # list them all
+docker network prune -a # get rid of them all
