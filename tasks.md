@@ -68,6 +68,17 @@ du -hs /path/to/directory
 find . -iname config.txt -exec grep "^[A-Za-z ]*\.ohionet\.org" {} \; -print | grep Name | sort
 ```
 
+## Imagemagick, Convert to Progressive JPEG
+
+#### entire directory
+`mogrify -interlace plane *.jpg`
+
+#### single file
+`convert inputfile.jpg -interlace plane outputfile.jpg`
+
+#### Progressive JPEG will state, Interlace: JPEG
+`identify -verbose file.jpg`
+
 
 ## Globbing
 
