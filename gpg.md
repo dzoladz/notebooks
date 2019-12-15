@@ -42,3 +42,15 @@ commit
 ```bash
 git config --global commit.gpgsign true
 ```
+
+9. Export GPG key
+```bash
+# temporary
+export GPG_TTY=$(tty)
+```
+-or-
+```bash
+# add to .bashrc or .zshrc to load at beginning of session
+GPG_TTY=$(tty)
+export GPG_TTY
+```
