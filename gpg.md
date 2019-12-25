@@ -50,7 +50,7 @@ export GPG_TTY=$(tty)
 ```
 -or-
 ```bash
-# add to .bashrc or .zshrc to load at beginning of session
+# add to .bashrc or .zshrc to load at each session
 GPG_TTY=$(tty)
 export GPG_TTY
 ```
