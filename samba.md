@@ -1,5 +1,8 @@
 A basic setup using samba on a raspberry pi 4 for time machine backups
 
+### STEP 1
+
+```bash
 ## --------------------------
 ## Set up Storage Block Disk
 ## --------------------------
@@ -24,16 +27,23 @@ mount -a
 
 # reboot
 reboot
+```
 
+### STEP 2
+
+```bash
 ## -------------------------
 ## Install Samba
 ## -------------------------
 
 # Install Samba
 apt-get install samba
+```
 
-# Update Samba Configuration to listen only to local network
-/etc/samba/smb.conf
+### STEP 3
+Update Samba Configuration to listen only to local network
+`/etc/samba/smb.conf`. The following are snippets, not a complete samba
+configuration file.
 
 ```bash
 [global]
@@ -59,6 +69,9 @@ fruit:delete_empty_adfiles = yes
     valid users = derek
 ```
 
+### STEP 4
+
+```bash
 # Test Config after Changes
 testparm
 
@@ -76,7 +89,11 @@ chown derek:sambashare /samba/users/derek
 chmod 2770 /samba/users/derek
 smbpasswd -a derek
 smbpasswd -e derek
+```
 
+### STEP 5
+
+```bash
 ## ------------------------
 ## Connect from macOS
 ## ------------------------
@@ -84,3 +101,4 @@ smbpasswd -e derek
 # Connecting from macOS on local network static IP
 # LAN DNS via PiHole
 smb://backup.derekzoladz.com/derek
+```
