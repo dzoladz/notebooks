@@ -133,3 +133,19 @@ Reload configuration
 ```bash
 sysctl -p
 ```
+
+## Batch Updating Files on the Server
+
+#### Find files owned by a user
+
+```bash
+#find {path} -user {username}
+find /usr/local -user derek
+```
+
+#### Find files assigned to a group
+
+```bash
+find {path} -group {username}
+find /usr/local -group derek
+```
