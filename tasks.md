@@ -149,3 +149,11 @@ find /usr/local -user derek
 find {path} -group {username}
 find /usr/local -group derek
 ```
+
+#### Change Ownership or Group
+
+```bash
+#chown --from=olduser newuser * -R
+chown --from=david derek * -R
+chown --from=:1053 :derek * -R
+```
