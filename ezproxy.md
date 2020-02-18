@@ -63,6 +63,7 @@ If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; S
 
 ## Strip Parameters from DOIs
 Although valid extensions of the Document Object Model, passing parameters in the doi can cause resolution issues within EZproxy sessions.
+> {host}?locatt=label:secondary_bloomsburyCollections
 ```bash
 SPUEditVar proxy_login=login?url=
 SPUEdit @^(https:\/\/doi.org\/)(10.[0-9]*\/)([0-9]*)(\?locatt=label.*)$@${proxy_login}$1$2$3@ir
