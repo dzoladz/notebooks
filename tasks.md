@@ -157,3 +157,9 @@ find /usr/local -group derek
 chown --from=david derek * -R
 chown --from=:1053 :derek * -R
 ```
+
+#### Show Me the Redirects!
+
+```bash
+wget http://libguides.heidelberg.edu/asc 2>&1 | grep Location:
+```
