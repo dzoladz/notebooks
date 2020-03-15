@@ -34,7 +34,7 @@ IfCountry US; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 ```
 
-## Supply Resource Credentials withn an iFrame
+## Supply Resource Credentials within an iFrame
 There are times when you might need to Find/Replace username and password values within an `<iframe>` element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.
 ```bash
 Find </iframe>
