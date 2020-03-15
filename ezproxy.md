@@ -34,6 +34,8 @@ IfCountry US; Set access = "allow"
 If access eq "deny"; Deny irefused.htm
 ```
 
+__NOTE__: The above snippet of code needs to be placed __within__ the authentication block to be actively restriction authentication attempts that originate from a non-US country code.
+
 ## Supply Resource Credentials within an iFrame
 There are times when you might need to Find/Replace username and password values within an `<iframe>` element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.
 ```bash
