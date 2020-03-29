@@ -28,6 +28,19 @@ username:password \
 
 Or, when a vendor transitions to HTTPS and you need to update 60+ EZproxy stanzas to specifically allow a new protocol.
 
+#### Here are a few one-liners:
+
+```
+# Print All Matching Lines
+sed -n '/^IncludeFile.*/p' config.txt
+
+# Print the First Occurrence of Matching Line
+sed -n '/^IncludeFile.*/ {p;q}' config.txt
+
+# Print Last Occurrence of a Match
+tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
+```
+
 ## awk (columnar data processor)
 
 Read through a directory of log files, find entries for a specific user, sort the results, print only the "interesting" data points

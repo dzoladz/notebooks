@@ -50,6 +50,15 @@ SAML authorization check, within `shibuser.txt`, against the `userid` attribute 
 If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; Stop
 ```
 
+## Auto-trigger attribute replacement via EZproxy Find/Replace 
+```bash
+(function() {
+        var url = document.getElementById('ctl00_BodyContent_ucShare_txtTitleURL').value;
+        var fixed_url = url.replace('fod.infobase.com', 'fod-infobase-com');
+        document.getElementById('ctl00_BodyContent_ucShare_txtTitleURL').setAttribute('value', fixed_url);
+})();
+```
+
 ## Cron Jobs for Monitoring Activity
 ```bash
 10 0 * * * find /usr/local -name messages.txt | xargs grep -E "Unrecognized|DANGER|hosts\s36[0-9][0-9]" | mail -E -s "EZproxy Warning Messages" -a "From: root \<root@{hostname}\>" recipient@derekzoladz.com
