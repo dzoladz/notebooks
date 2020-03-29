@@ -43,7 +43,6 @@ document.addEventListener('cdm-home-page:enter', function(e){
     // ...
 });
 ```
-#### [Customization Cookbook](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/Customization_cookbook
-)
+#### [Customization Cookbook](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/Customization_cookbook)
 
 There's also a [Recipe Portal](https://cdmdemo.contentdm.oclc.org/digital/custom/recipedownloads) with downloadable code and demonstration sites.
