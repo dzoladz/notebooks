@@ -10,6 +10,7 @@ Everything on this page is in draft-mode. Expect errors, amendments, oversights,
 - Facebook's [create-react-app](https://github.com/facebook/create-react-app)
 - [MDN web docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - Compatibility checks with browser via [Babel](https://babeljs.io/)
+- Reusable components! [bit](https://github.com/teambit/bit)
 
 ### CONTENTdm Documentation
 CONTENTdm provides [JavaScript Customization Docs](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/JavaScript_customizations) to facilitate a general understanding of the React-based CONTENTdm application.
