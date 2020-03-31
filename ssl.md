@@ -42,3 +42,32 @@ Check if a private key matches a certificate. If the results of the following co
 openssl x509 -noout -modulus -in some-domain.crt | openssl md5 
 openssl rsa -noout -modulus -in some-domain.key | openssl md5
 ```
+
+#### General
+ 
+- Check Available Entropy (0 - 4096): `cat /proc/sys/kernel/random/entropy_avail`
+
+Supporting low entropy states with the HAVEGE algorithm
+
+```bash
+# Ubuntu, install haveged package
+apt-get install haveged
+
+# Tuning - /etc/default/haveged
+# -w sets low entropy watermark (in bits)
+DAEMON_ARGS="-w 2048"
+
+# Start Service at reboot
+update-rc.d haveged defaults 00 99
+
+# test system entropy
+apt-get install rng-tools
+
+# Run FIPS-140 tests
+cat /dev/random | rngtest -c 1000
+```
+
+Ask the `urandom` device to spit out 1k of gooey randomness
+```bash
+head -c 1k /dev/urandom | tr -dc 'a-zA-Z0-9!@#$%^&' | fold -w 100 && printf  "\n"
+```
