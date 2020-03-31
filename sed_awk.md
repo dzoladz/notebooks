@@ -49,3 +49,7 @@ Read through a directory of log files, find entries for a specific user, sort th
 grep -rni "username" | sort | awk 'BEGIN {OFS="\t"}; {split($1,date,":"); print date[3], $2, $3, $4}'
 ```
 
+You can also find IPs that hit the proxy server most frequently
+```bash
+awk '{ print $4}' $PATH_TO_LOGFILE | sort | uniq -c | sort -nr | head -n 20
+```
