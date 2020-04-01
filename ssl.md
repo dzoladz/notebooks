@@ -46,6 +46,7 @@ openssl rsa -noout -modulus -in some-domain.key | openssl md5
 #### General
  
 - Check Available Entropy (0 - 4096): `cat /proc/sys/kernel/random/entropy_avail`
+- Watch Available Entropy: `watch -n .1 cat /proc/sys/kernel/random/entropy_avail`
 
 Supporting low entropy states with the HAVEGE algorithm
 
