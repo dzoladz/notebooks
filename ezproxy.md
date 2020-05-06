@@ -79,3 +79,17 @@ Although valid extensions of the Document Object Model, passing parameters in th
 SPUEditVar proxy_login=login?url=
 SPUEdit @^(https:\/\/doi.org\/)(10.[0-9]*\/)([0-9]*)(\?locatt=label.*)$@${proxy_login}$1$2$3@ir
 ```
+
+## Group-based Access to /Loggedin Files
+
+1. In `user.txt`, create the authenticated group
+```bash
+::group=SecretFiles+Admin.Groups
+user:password
+```
+
+2. Establish a `../loggedin/` directory for the named Group from `user.txt`
+```bash
+./docs/loggedin/SecretFiles
+```
+
