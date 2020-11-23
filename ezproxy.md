@@ -93,3 +93,15 @@ user:password
 ./docs/loggedin/SecretFiles
 ```
 
+## Issue a Manual Call to the Sierra Patron API
+Given a Sierra Patron Record containing `P BARCODE[pb]=fakeuser1234`
+```bash
+curl --interface eth0:48 https://{sierra-server-domain}:54620/PATRONAPI/fakeuser1234/dump
+```
+
+If successful, the call will return patron data; otherwise, a failure message will be returned with additional information to diagnose the issue. For example:
+```bash
+<BODY>ERRNUM=2<BR>
+ERRMSG=Record ID not unique<BR>
+</BODY>
+```
