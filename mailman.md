@@ -13,3 +13,9 @@ A few commonly used mailman commands to make my life more enjoyable. Find binari
 
 4. Export Member List for Migration
 `list_members --fullnames -o membership.txt listname`
+   
+5. List All Mailing Lists
+`list_lists`
+   
+6. Find a Member in All Lists
+`find_member username@domain.edu`
