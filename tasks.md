@@ -61,6 +61,13 @@ update-grub
 ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
 ```
 
+## Convert .pdf -> .jpg with ImageMagick
+
+```bash
+# %d will iterate using 1 digit, %3d 3 digits
+convert -density 150 art.pdf -quality 90 %d.jpg
+``` 
+
 ## Find the Size of a Directory
 
 ```bash
