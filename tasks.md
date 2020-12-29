@@ -68,6 +68,11 @@ ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
 convert -density 150 art.pdf -quality 90 %d.jpg
 ``` 
 
+##  Stretches the shortest side to match the longest side so that the image becomes square
+```bash
+ls * | xargs -L 1 -I {} magick {} -gravity center -background white -extent "%[fx:max(w,h)]x%[fx:max(w,h)]" sq-{}
+```
+
 ## Find the Size of a Directory
 
 ```bash
