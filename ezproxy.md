@@ -38,7 +38,7 @@ __NOTE__: The above snippet of code needs to be placed __within__ the authentica
 
 ## Supply Resource Credentials within an iFrame
 There are times when you might need to Find/Replace username and password values within an `<iframe>` element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.
-```bash
+```html
 Find </iframe>
 Replace </iframe><script>(function() { setTimeout(function() {window.frames[0].document.getElementById('username').value = "USERNAME";}, 1000); })();(function() { setTimeout(function() {window.frames[0].document.getElementById('password').value = "PASSWORD";}, 1000); })();</script>
 ```
@@ -67,7 +67,7 @@ Remove BOM and write file back to disk:
 ```
 
 ## Auto-trigger attribute replacement via EZproxy Find/Replace 
-```bash
+```javascript
 (function() {
         var url = document.getElementById('ctl00_BodyContent_ucShare_txtTitleURL').value;
         var fixed_url = url.replace('fod.infobase.com', 'fod-infobase-com');
@@ -103,8 +103,8 @@ Useful in those cases when only the username is accepted on the target server an
 function processUsername() {
   var email = document.getElementsByName('user')[0].value;
   var username = email.split('@')[0];
-	document.getElementsByName('user')[0].value = username;
-	console.log('the username value submitted is: ' + document.getElementsByName('user')[0].value);
+  document.getElementsByName('user')[0].value = username;
+  console.log('the username value submitted is: ' + document.getElementsByName('user')[0].value);
 }
 ```
 
