@@ -50,6 +50,22 @@ SAML authorization check, within `shibuser.txt`, against the `userid` attribute 
 If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; Stop
 ```
 
+## Byte Order Mark (BOM)
+
+When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character `ï»¿` that begins the `config.txt` file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.
+
+Using vim, does current file have a BOM?
+
+```bash
+:set bomb?
+```
+
+Remove BOM and write file back to disk:
+
+```bash
+:set nobomb
+```
+
 ## Auto-trigger attribute replacement via EZproxy Find/Replace 
 ```bash
 (function() {
@@ -79,6 +95,19 @@ Although valid extensions of the Document Object Model, passing parameters in th
 SPUEditVar proxy_login=login?url=
 SPUEdit @^(https:\/\/doi.org\/)(10.[0-9]*\/)([0-9]*)(\?locatt=label.*)$@${proxy_login}$1$2$3@ir
 ```
+
+## Use Input onclick="processUsername()" to Submit Only Username
+Useful in those cases when only the username is accepted on the target server and username@institution.edu fails. Removes the need for textual directions on the login UI.
+
+```javascript
+function processUsername() {
+  var email = document.getElementsByName('user')[0].value;
+  var username = email.split('@')[0];
+	document.getElementsByName('user')[0].value = username;
+	console.log('the username value submitted is: ' + document.getElementsByName('user')[0].value);
+}
+```
+
 
 ## Group-based Access to /Loggedin Files
 

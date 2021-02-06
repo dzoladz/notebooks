@@ -13,22 +13,6 @@ ssh-keygen -if ssh2publickey.pub >> opensshpublickey.pub
 curl -s -I sts.psychiatrist.com|sed -n 's/^S[erv]*: //p'
 ```
 
-## Byte Order Mark (BOM)
-
-When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character `ï»¿` that begins the `config.txt` file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.
-
-Using vim, does current file have a BOM?
-
-```bash
-:set bomb?
-```
-
-Remove BOM and write file back to disk:
-
-```bash
-:set nobomb
-```
-
 ## Print the Number of Lines in a File
 
 Because I can never remember the command I need
@@ -61,18 +45,6 @@ update-grub
 ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
 ```
 
-## Convert .pdf -> .jpg with ImageMagick
-
-```bash
-# %d will iterate using 1 digit, %3d 3 digits
-convert -density 150 art.pdf -quality 90 %d.jpg
-``` 
-
-##  Stretches the shortest side to match the longest side so that the image becomes square
-```bash
-ls * | xargs -L 1 -I {} magick {} -gravity center -background white -extent "%[fx:max(w,h)]x%[fx:max(w,h)]" sq-{}
-```
-
 ## Find the Size of a Directory
 
 ```bash
@@ -84,18 +56,6 @@ du -hs /path/to/directory
 ```bash
 find . -iname config.txt -exec grep "^[A-Za-z ]*\.ohionet\.org" {} \; -print | grep Name | sort
 ```
-
-## Imagemagick, Convert to Progressive JPEG
-
-#### entire directory
-`mogrify -interlace plane *.jpg`
-
-#### single file
-`convert inputfile.jpg -interlace plane outputfile.jpg`
-
-#### Progressive JPEG will state, Interlace: JPEG
-`identify -verbose file.jpg`
-
 
 ## Globbing
 
