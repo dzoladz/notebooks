@@ -3,6 +3,9 @@ Documentation relating to the Evergreen ILS APIs are scattered, so I'm trying to
 - OSRF Gateway: [https://wiki.evergreen-ils.org/doku.php?id=osrfhttp:opensrf_gateway](https://wiki.evergreen-ils.org/doku.php?id=osrfhttp:opensrf_gateway)
 - SuperCat: [https://docs.evergreen-ils.org/eg/docs/latest/development/data_supercat.html](https://docs.evergreen-ils.org/eg/docs/latest/development/data_supercat.html)
 - unAPI: [https://docs.evergreen-ils.org/eg/docs/latest/development/data_unapi.html](https://docs.evergreen-ils.org/eg/docs/latest/development/data_unapi.html)
+- opacAPI: [https://wiki.evergreen-ils.org/doku.php?id=documentation:technical:opacapi](https://wiki.evergreen-ils.org/doku.php?id=documentation:technical:opacapi)
+- Developer Overview: [https://wiki.evergreen-ils.org/doku.php?id=eg_developer_overview](https://wiki.evergreen-ils.org/doku.php?id=eg_developer_overview)
+
 
 # Commands
 
