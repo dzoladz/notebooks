@@ -108,6 +108,18 @@ function processUsername() {
 }
 ```
 
+## Nested user.txt SAML Authorization | Resource Groups 
+
+```shell
+If auth:"urn:oid:2.5.4.10" eq "Student"; {
+  If auth:"CurrentMajor" eq "Business"; Group +Business
+  If auth:"CurrentMajor" eq "Law"; Group +Law
+}
+ 
+If auth:"urn:oid:2.5.4.10" eq "Faculty"; {
+  If auth:"Department" eq "Law"; Group +Law
+}
+```
 
 ## Group-based Access to /Loggedin Files
 
